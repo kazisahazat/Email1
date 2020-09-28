@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Karon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+            color: #000;
+        }
+        .pt-3 {
+            padding-top: 50px;
+        }
+        .pb-3 {
+            padding-bottom: 60px;
+        }
+        .logo {
+            width: 220px;
+        }
+        .logo a img {
+            width: 100%;
+        }
+        .main_hadding svg {
+            position: relative;
+            top: -40px;
+            background: #fff;
+            padding: 20px;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border-bottom-left-radius: 50%; 
+            border-bottom-right-radius: 50%;
+        }
+        .main_hadding h1 {
+            font-weight: 700;
+            font-size: 32px;
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            position: relative;
+            top: -20px;
+        }
+        .customer_name {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            text-align: center;
+        }
+        .customer_name h3 {
+            font-size: 22px;
+            font-weight: 500;
+            color: #000;
+        }
+        .customer_name h4 {
+            font-size: 22px;
+            font-weight: 400;
+            color: #000;
+        }
+        .o-id {
+            padding: 10px;
+            border-right: 2px solid #fff;
+            border-bottom: 1px solid #fff;
+        }
+        .o-id h4 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: 400;
+            color: #fff;
+        }
+        .o-id h5 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: 600;
+            color: #fff;
+        }
+        .o-date {
+            padding: 15px;
+            border-bottom: 1px solid #fff;
+        }
+        .o-date h4 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: 400;
+            color: #fff;
+        }
+        .o-date h5 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: 600;
+            color: #fff;
+        }
+        .mobile_no {
+            border-bottom: 1px solid #fff; 
+        }
+        .mobile_no h4 {
+            font-size: 22px;
+            font-weight: 400;
+            color: #000;
+            margin: 0;
+            padding: 5px 0;
+            
+        }
+        .mobile_no h4 span {
+            font-size: 22px;
+            font-weight: 500;
+            margin: 0;
+            padding-left: 20px;
+        }
+        .amount {
+            background: #f4f4f4;
+            padding: 20px;
+            padding-right: 90px;
+            border-bottom: 1px solid #fff; 
+        }
+        .amount:hover {
+            background: #29de91;
+        }
+        .flote1 h4 {
+            font-size: 22px;
+            font-weight: 400;
+            color: #000;
+            margin: 0;
+        }
+        .flote2 span {
+            text-align: right;
+            font-size: 22px;
+            font-weight: 500;
+            color: #000;
+            margin: 0;
+        }
+        .flote1 {
+            float: left;
+        }
+        .flote2 {
+            float: right;
+        }
+        .btn_1 a {
+            font-size: 30px;
+            font-weight: 700;
+            color: #fff;
+            padding: 20px 160px;
+            text-align: center;
+            background: linear-gradient(90deg,#FF46FF,#FFCE00);
+            text-decoration: none;
+            border-radius: 15px;
+            
+            
+        }
+        .last_item {
+            width: 1100px;
+            margin-top: 60px;
+            padding-bottom: 60px;
+        }
+        .item_1 {
+            float: left;
+            margin-right: 22px;
+            border: 2px solid #f4f4f4;
+        }
+        .item_2 {
+            float: left;
+            border: 2px solid #f4f4f4;
+        }
+        .main_item1 {
+            width: 530px;
+        }
+        .item_1img {
+            float: left;
+            width: 150px;
+        }
+        .item_1img img {
+            width: 100%;
+        }
+        .vandor_name {
+            float: left;
+            width: 185px;
+            
+        }
+        .vandor_name h5 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 400;
+            padding-top: 15px;
+            padding-left: 15px;
+        }
+        .vandor_name h4 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 500;
+            padding-left: 15px;
+        }
+        .Status_l {
+            float: left;
+            width: 185px;
+        }
+        .Status_l h5 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 400;
+            padding-top: 15px;
+        }
+        .Status_l h4 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 500;
+            padding-bottom: 15px;
+        }
+        .Status_l h6 {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 400;
+            color: #29de91;
+        }
+        
+        
+        
+        .bcolor {
+            background: #f4f4f4;
+        }
+        .price_l {
+            text-align: center;
+            padding: 15px 0;
+        }
+        .price_l h5 {
+            margin: 0;
+            font-size: 17px;
+            font-weight: 400;
+        }
+        .price_l h6 {
+            margin: 0;
+            font-size: 17px;
+            font-weight: 400;
+            padding-top: 15px; 
+        }
+        .delivery_l h5 {
+            margin: 0;
+            font-size: 17px;
+            font-weight: 400; 
+        }
+        .delivery_l {
+            text-align: center;
+            padding: 15px 0;
+        }
+        .delivery_l h6 {
+            margin: 0;
+            font-size: 17px;
+            font-weight: 400;
+            padding-top: 15px; 
+        }
+        
+        
+        /*  footer part start   */
+        .footer_part {
+            padding-top: 50px;
+            padding-bottom: 150px;
+            text-align: center;
+        }
+        .inista_img {
+            width: 30px;
+            align-content: center;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .inista_img img {
+            width: 100%;
+        }
+        .footer_part h3 {
+            font-size: 25px;
+            font-weight: 400;
+            color: #000;
+            padding-top: 20px;
+            padding-bottom: 30px;
+            margin: 0;
+        }
+        .footer_part h3 span {
+            color: #000;
+            font-weight: 700;
+        }
+        .footer_part h4{
+            font-size: 22px;
+            font-weight: 400;
+            color: #000;
+            padding-top: 20px;
+            margin: 0;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </style>
+    
+    
+</head>
+<body bg-color="#f4f4f4">
+
+<!--===============================================================
+========================  Navbar part start  ======================
+================================================================-->
+<table border="0" cellpadding="0" cellspacing="0" style="max-width: 1920px; width: 100%;" align="center">
+    <tr>
+        <td align="center" class="pt-3 pb-3">
+            <div class="logo">
+                <a href="#!"><img src="https://i.imgur.com/OdQSyqo.png" title="source: imgur.com" /></a>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table border="0" cellpadding="0" cellspacing="0" align="center" style="background: linear-gradient(#FFCE00,#FF46FF); width: 1300px; height: auto; border-radius: 15px; padding-bottom: 10px;">
+                <tr>
+                    <td border="0" cellpadding="0" cellspacing="0" class="main_hadding" align="center">
+                        <svg id="ic-add-shopping-cart-24px" xmlns="http://www.w3.org/2000/svg" width="25.626" height="25.626" viewBox="0 0 25.626 25.626">
+                            <path id="Path_13" data-name="Path 13" d="M0,0H25.626V25.626H0ZM19.551,6.407,16.6,11.745Z" fill="none" />
+                            <path id="Path_14" data-name="Path 14" d="M11.678,9.542h2.136v-3.2h3.2V4.2h-3.2V1H11.678V4.2h-3.2V6.339h3.2Zm-4.271,9.61a2.136,2.136,0,1,0,2.136,2.136A2.133,2.133,0,0,0,7.407,19.152Zm10.678,0a2.136,2.136,0,1,0,2.136,2.136A2.133,2.133,0,0,0,18.084,19.152Zm-10.5-3.47.032-.128.961-1.74h7.955a2.125,2.125,0,0,0,1.869-1.1l4.122-7.485L20.668,4.2h-.011L19.483,6.339l-2.947,5.339H9.04L8.9,11.389,6.51,6.339,5.5,4.2l-1-2.136H1V4.2H3.136l3.844,8.1L5.538,14.924a2.064,2.064,0,0,0-.267,1.025,2.142,2.142,0,0,0,2.136,2.136H20.22V15.949H7.855A.271.271,0,0,1,7.588,15.682Z" transform="translate(0.068 0.068)" fill="#333358" />
+                        </svg>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td  border="0" cellpadding="0" cellspacing="0" class="main_hadding">
+                        <h1>New Order Confirmation</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table border="0" cellpadding="0" cellspacing="0" align="center" style="background: #fff; width: 1280px; border-radius: 15px;">
+                            <tr>
+                                <td border="0" cellpadding="0" cellspacing="0" class="customer_name">
+                                    <h3>Hello {Customer Name},</h3>
+                                    <h4>Thank you for letting us be part of your special day. </h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table border="0" cellpadding="0" cellspacing="0" align="center" width="800" class="pb-3">
+                                        <tr>
+                                            <td border="" cellpadding="0" cellspacing="0" width="400" class="o-id" style="background: #333357;">
+                                                <h4>Order ID: </h4>
+                                                <h5>{order ID}</h5>
+                                            </td>
+                                            <td border="0" cellpadding="0" cellspacing="0" width="400" class="o-date" style="background: #333357;">
+                                                <h4>Event Date: </h4>
+                                                <h5>{Event Date} </h5>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td  border="0" colspan="2" cellpadding="0" cellspacing="0" class="mobile_no" style="background: #e7e7e7; padding: 15px;" width="800">
+                                                <h4>Mobile Number <span>{Customer Mobile Number}</span></h4>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td  border="0" colspan="2" cellpadding="0" cellspacing="0" class="mobile_no address" style="background: #e7e7e7; padding: 15px;" width="800">
+                                                <h4>Address  <span>{Full Address}</span></h4>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td  border="0" colspan="2" cellpadding="0" cellspacing="0" class="total amount" width="800">
+                                                <div class="flote1">
+                                                    <h4>Total Amount</h4>
+                                                </div>  
+                                                <div class="flote2">
+                                                    <span>{currency} {amount} </span>
+                                                </div>
+                                                <div class="clr"></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td  border="0" colspan="2" cellpadding="0" cellspacing="0" class="total amount" width="800">
+                                                <div class="flote1">
+                                                    <h4>To be paid now</h4>
+                                                </div>  
+                                                <div class="flote2">
+                                                    <span>{currency} {amount} </span>
+                                                </div>
+                                                <div class="clr"></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td  border="0" colspan="2" cellpadding="0" cellspacing="0" class="total amount" width="800">
+                                                <div class="flote1">
+                                                    <h4>To be paid now</h4>
+                                                </div>  
+                                                <div class="flote2">
+                                                    <span>{currency} {amount} </span>
+                                                </div>
+                                                <div class="clr"></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td  border="0" colspan="2" cellpadding="0" cellspacing="0" class="total amount" width="800">
+                                                <div class="flote1">
+                                                    <h4>Paid Amount</h4>
+                                                </div>  
+                                                <div class="flote2">
+                                                    <span>{currency} {amount} </span>
+                                                </div>
+                                                
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td  border="0" colspan="2" cellpadding="0" cellspacing="0" class="total amount" width="800">
+                                                <div class="flote1">
+                                                    <h4>To be Paid after Confirmation</h4>
+                                                </div>  
+                                                <div class="flote2">
+                                                    <span>{currency} {amount} </span>
+                                                </div>
+                                                <div class="clr"></div>
+                                            </td>
+                                        </tr>
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </table>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td border="0" cellpadding="0" cellspacing="0" class="btn_1" align="center" width="800">
+                                    <a href="#!">Manage Booking</a>
+                                </td>
+                            </tr>
+                            
+                            <!--  Footer part start  -->
+                            
+                            <tr>
+                                <td>
+                                    <table border="0" cellpadding="0" cellspacing="0" align="center" class="last_item" align="center">
+                                        <tr>
+                                            <td>
+                                                <div class="item_1">
+                                                    <div class="main_item1" >
+                                                        <div class="item_1img">
+                                                            <img src="https://i.imgur.com/uygi2MH.png" title="source: imgur.com" />
+                                                        </div>
+                                                        <div class="vandor_name">
+                                                            <h5>Vendor Name</h5>
+                                                            <h4>{Vendor Name}</h4>
+
+                                                            <h5>Name</h5>
+                                                            <h4>{Item Name}</h4>
+                                                        </div>
+                                                        <div class="Status_l">
+                                                            <h5>Vendor Name</h5>
+                                                            <h4>{Vendor Name}</h4>
+
+                                                            <h5>Date &amp; Time</h5>
+                                                            <h6>{Selected Date}
+                                                                <br>
+                                                                {Selected Time}</h6>
+                                                        </div>
+                                                        <div class="clr"></div>
+                                                    </div>
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%" class="bcolor">
+                                                        <tr> 
+                                                            <td border="0" cellpadding="0" cellspacing="0" style="border-right: 2px solid #fff;">
+                                                                <div class="price_l">
+                                                                    <h5>Price</h5>
+                                                                    <h6>{currency} {amount}</h6>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="delivery_l">
+                                                                    <h5>Delivery Charges</h5>
+                                                                    <h6>{currency} {amount}</h6>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <div class="item_2">
+                                                    <div class="main_item1" >
+                                                        <div class="item_1img">
+                                                            <img src="https://i.imgur.com/uygi2MH.png" title="source: imgur.com" />
+                                                        </div>
+                                                        <div class="vandor_name">
+                                                            <h5>Vendor Name</h5>
+                                                            <h4>{Vendor Name}</h4>
+
+                                                            <h5>Name</h5>
+                                                            <h4>{Item Name}</h4>
+                                                        </div>
+                                                        <div class="Status_l">
+                                                            <h5>Vendor Name</h5>
+                                                            <h4>{Vendor Name}</h4>
+
+                                                            <h5>Date &amp; Time</h5>
+                                                            <h6>{Selected Date}
+                                                                <br>
+                                                                {Selected Time}</h6>
+                                                        </div>
+                                                        <div class="clr"></div>
+                                                    </div>
+                                                    <table border="0" cellpadding="0" cellspacing="0" width="100%" class="bcolor">
+                                                        <tr>
+                                                            <td border="0" cellpadding="0" cellspacing="0"  style="border-right: 2px solid #fff;">
+                                                                <div class="price_l">
+                                                                    <h5>Price</h5>
+                                                                    <h6>{currency} {amount}</h6>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="delivery_l">
+                                                                    <h5>Delivery Charges</h5>
+                                                                    <h6>{currency} {amount}</h6>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <div class="clr"></div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                
+                
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="footer_part">
+                <div class="inista_img">
+                    <img src="https://i.imgur.com/4LWg57T.png" title="source: imgur.com" />
+                </div>
+                <h3>This message was sent to you by festivity.com.kw <br>  Need help? contact us at <span>{CustomercareEmail}</span></h3>
+                <h4>Copyright © 2020 Festivity , All rights reserved.</h4>
+            </div>
+        </td>
+    </tr>
+</table> 
+
+
+
+<!--===============================================================
+========================  Navbar part start  ======================
+================================================================-->    
+
+
+<!--===============================================================
+========================  Banner part start  ======================
+================================================================-->
+    
+
+
+<!--===============================================================
+========================  Banner part start  ======================
+================================================================-->    
+
+
+<!--===============================================================
+========================  About part start  =======================
+================================================================-->
+
+
+
+<!--===============================================================
+========================  About part start  =======================
+================================================================-->
+
+
+<!--===============================================================
+========================  Skill part start  =======================
+================================================================-->
+    
+ 
+
+<!--===============================================================
+========================  Skill part start  =======================
+================================================================-->
+
+
+<!--===============================================================
+========================  Service part start  ===================
+================================================================-->
+
+
+
+<!--===============================================================
+========================  Service part End  ===================
+================================================================-->
+
+
+
+<!--===============================================================
+========================  Portfolio part End  =====================
+================================================================-->
+
+
+<!--===============================================================
+========================  Blog part Start  ========================
+================================================================-->
+    
+
+
+<!--===============================================================
+========================  Blog part End  ==========================
+================================================================-->
+
+
+
+
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
